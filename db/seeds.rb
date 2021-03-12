@@ -33,7 +33,7 @@ p2 = Picture.create(
     )
 
 p3 = Picture.create(
-    image_url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/362032/1599881/main-image", 
+    image_url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/27552/66078/main-image", 
     title: "Design for the Right Pauldron of a Parade Armor",
     artist: "Attributed to Jean Cousin the Elder", 
     date: "ca. 1555", 
@@ -48,14 +48,30 @@ p4 = Picture.create(
     )
 
 p5 = Picture.create(
-    image_url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/11834/15035/main-image", 
-    title: "Leatherstocking's Rescue",
-    artist: "John Quidor", 
-    date: "1832", 
-    description: "While better known for his paintings based on the writings of Washington Irving, Quidor also painted scenes from the popular novels of James Fenimore Cooper. In this episode from The Pioneers (1823), the woodsman Natty Bumppo, also known as Leatherstocking, rescues two comely young women from a female panther, which, in protecting her cub, destroyed their dog and then turned, threateningly, to them. Quidor enhanced the fantastic and horrific aspects of the story in the highly stylized setting of twisted tree trunks and roots, which take on menacing shapes."
+    image_url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436535/796067/main-image", 
+    title: "Wheat Field with Cypresses",
+    artist: "Vincent van Gogh", 
+    date: "1889", 
+    description: "Cypresses gained ground in Van Gogh’s work by late June 1889 when he resolved to devote one of his first series in Saint-Rémy to the towering trees. Distinctive for their rich impasto, his exuberant on-the-spot studies include the Met’s close-up vertical view of cypresses (49.30) and this majestic horizontal composition, which he illustrated in reed-pen drawings sent to his brother on July 2. Van Gogh regarded the present work as one of his “best” summer landscapes and was prompted that September to make two studio renditions: one on the same scale (National Gallery, London) and the other a smaller replica, intended as a gift for his mother and sister."
     )
 
-    5.times do
+    p6 = Picture.create(
+    image_url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/24937/60394/main-image", 
+    title: "Armor of Infante Luis, Prince of Asturias",
+    artist: "Signature probably refers to Jean Drouart", 
+    date: "1712", 
+    description: "Possibly the last royal armor made in Europe, this is believed to have been presented to the five-year-old Infante Luis (1707–1724), prince of Asturias, by his great-grandfather Louis XIV of France (1638–1715, reigned from 1643). Luis was the first Spanish-born Bourbon heir to the throne of Spain and ruled briefly as Luis I in 1724. The armor is signed and dated on the backplate Drouar Ordinaire du Roi aux Heaume à Paris 1712 (Drouar, armorer-in-ordinary to the king, at the sign of the helm, in Paris, 1712). The signature probably refers to Jean Drouart (died before October 1715), a royal armorer. Drouart was one of the last practicing armorers active in France by 1712. Remarkable for the state of its preservation, the armor retains its lustrous blue and gold surfaces and nearly all the original red silk lining. The gilt rivet heads are of heraldic design—the lion of León, the castle of Castile, and the fleur-de-lis of France—representing the dynastic claims to which Luis was heir."
+    )
+
+    p7 = Picture.create(
+    image_url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/437153/1728757/main-image", 
+    title: "Oedipus and the Sphinx",
+    artist: "Gustave Moreau", 
+    date: "1864", 
+    description: "The legendary Greek prince Oedipus confronts the malevolent Sphinx, who torments travelers with a riddle: What creature walks on four legs in the morning, two legs at noon, and three legs in the evening? Remains of victims who answered incorrectly litter the foreground. (The solution is the human, who crawls as a baby, strides upright in maturity, and uses a cane in old age.) Moreau made his mark with this painting at the Paris Salon of 1864. Despite the growing prominence of depictions of everyday life, he portrayed stories from the Bible, mythology, and his imagination. His otherworldly imagery inspired many younger artists and writers, including Odilon Redon and Oscar Wilde."
+    )
+
+    10.times do
         Comment.create(comment: Faker::TvShows::NewGirl.quote, user: User.all.sample, picture: Picture.all.sample)
     end
 
